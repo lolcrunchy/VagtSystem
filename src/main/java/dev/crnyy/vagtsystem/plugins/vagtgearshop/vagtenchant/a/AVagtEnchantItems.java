@@ -1,4 +1,4 @@
-package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant;
+package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.a;
 
 import dev.crnyy.vagtsystem.utils.ItemStackManager;
 import dev.crnyy.vagtsystem.utils.LoreManager;
@@ -10,7 +10,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-public class CVagtEnchantItems {
+public class AVagtEnchantItems {
 
     private static Inventory helmetInv = Bukkit.createInventory(null, 45, "Enchant Hjelm");
     private static Inventory chestplateInv = Bukkit.createInventory(null, 45, "Enchant Brystplade");

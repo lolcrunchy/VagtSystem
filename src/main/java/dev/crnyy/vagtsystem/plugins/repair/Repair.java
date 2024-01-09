@@ -4,10 +4,12 @@ import dev.crnyy.vagtsystem.Main;
 import dev.crnyy.vagtsystem.files.Config;
 import dev.crnyy.vagtsystem.files.Message;
 import dev.crnyy.vagtsystem.utils.Messages;
+import net.milkbowl.vault.chat.Chat;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
+import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -39,7 +41,6 @@ public class Repair implements Listener {
             e.setLine(3, ChatColor.translateAlternateColorCodes('&', message.getMessages().getString("repairsign.text.4nd")));
         }
     }
-
     @EventHandler
     public void onSignClick(PlayerInteractEvent e) {
         Player player = e.getPlayer();
@@ -74,5 +75,4 @@ public class Repair implements Listener {
             }
         }
     }
-
 }

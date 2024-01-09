@@ -1,4 +1,4 @@
-package dev.crnyy.vagtsystem.plugins.vagtgearshop;
+package dev.crnyy.vagtsystem.plugins.vagtgearshop.c;
 
 import dev.crnyy.vagtsystem.utils.ItemStackManager;
 import dev.crnyy.vagtsystem.utils.LoreManager;

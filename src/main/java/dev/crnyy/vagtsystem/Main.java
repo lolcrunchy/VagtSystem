@@ -15,10 +15,15 @@ import dev.crnyy.vagtsystem.plugins.repair.Repair;
 import dev.crnyy.vagtsystem.plugins.vagtchat.VagtChat;
 import dev.crnyy.vagtsystem.plugins.vagtchat.VagtChatCommand;
 import dev.crnyy.vagtsystem.plugins.vagtcoins.VagtCoinsCommand;
-import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.CVagtEnchantItems;
-import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.CVagtEnchantItemsListener;
-import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.CVagtEnchantListener;
-import dev.crnyy.vagtsystem.plugins.vagtgearshop.CVagtShopListener;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.a.AVagtShopListener;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.b.BVagtShopListener;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.c.CVagtEnchantItems;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.c.CVagtEnchantItemsListener;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.c.CVagtEnchantListener;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.c.CVagtShopListener;
+import dev.crnyy.vagtsystem.plugins.vagtkiste.VagtKiste;
+import dev.crnyy.vagtsystem.plugins.vagtkiste.VagtKisteCommand;
+import dev.crnyy.vagtsystem.plugins.vagtkiste.VagtKisteStatus;
 import dev.crnyy.vagtsystem.plugins.vagtlevel.TestCommand;
 import dev.crnyy.vagtsystem.plugins.vagtlevel.VagtLevel;
 import dev.crnyy.vagtsystem.plugins.vagtlevel.VagtLevelCommand;
@@ -31,16 +36,15 @@ import dev.crnyy.vagtsystem.plugins.vagtontime.VagtOntimeCommand;
 import dev.crnyy.vagtsystem.utils.Messages;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
 public class Main extends JavaPlugin {
 
     public static Economy economy;
     private Config config;
     private Message message;
+
 
     @Override
     public void onEnable() {
@@ -56,22 +60,84 @@ public class Main extends JavaPlugin {
         this.config = new Config(this);
         this.message = new Message(this);
 
+        listeners();
+        commands();
+
+        loadDataFile();
+    }
+
+    @Override
+    public void onDisable() {
+
+        saveDataFile();
+        config.saveConfig();
+    }
+
+
+    private boolean setupEconomy() {
+        final RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
+        if (economyProvider != null) {
+            economy = economyProvider.getProvider();
+        }
+
+        return (economy != null);
+    }
+
+    private void listeners() {
+        PlayerManager manager = new PlayerManager();
         Messages messages = new Messages(message);
 
-        this.getServer().getPluginManager().registerEvents(new SignManager(), this);
-        this.getCommand("vagt").setExecutor(new VagtCommand(config));
+        //Vagt
+        this.getServer().getPluginManager().registerEvents(new SignManager(message, config), this);
+        this.getServer().getPluginManager().registerEvents(new VagtMenuListener(), this);
 
         //VagtGearShop og EnchantShop
-        this.getServer().getPluginManager().registerEvents(new CVagtShopListener(this, new Messages(message)), this);
+        this.getServer().getPluginManager().registerEvents(new CVagtShopListener(this, new Messages(message), config), this);
         this.getServer().getPluginManager().registerEvents(new CVagtEnchantListener(), this);
-        this.getServer().getPluginManager().registerEvents(new CVagtEnchantItemsListener(new ArmorManager(), config, new CVagtEnchantItems()), this);
+        this.getServer().getPluginManager().registerEvents(new CVagtEnchantItemsListener(new ArmorManager(), config, messages, new CVagtEnchantItems()), this);
+
+        this.getServer().getPluginManager().registerEvents(new BVagtShopListener(this, new Messages(message)), this);
+
+        this.getServer().getPluginManager().registerEvents(new AVagtShopListener(this, new Messages(message)), this);
 
         //VagtChat
         this.getServer().getPluginManager().registerEvents(new VagtChat(messages), this);
-        this.getCommand("vagtchat").setExecutor(new VagtChatCommand());
 
         //VagtLevel
         this.getServer().getPluginManager().registerEvents(new VagtLevel(manager, new VagtLevelQuests()), this);
+
+        //VagtOntime
+        this.getServer().getPluginManager().registerEvents(new VagtOntime(this), this);
+
+        //Repair
+        this.getServer().getPluginManager().registerEvents(new Repair(config, message, new Messages(message)), this);
+
+        //VagtBuffs
+        this.getServer().getPluginManager().registerEvents(new VagtBuffs(config, message), this);
+
+        //Signs
+        this.getServer().getPluginManager().registerEvents(new HealSign(config, message), this);
+
+        //VagtKiste
+        this.getServer().getPluginManager().registerEvents(new VagtKiste(config, message), this);
+        this.getServer().getPluginManager().registerEvents(new VagtKisteStatus(config, message), this);
+
+        //Vagt Warps
+        this.getServer().getPluginManager().registerEvents(new VagtWarpMenuListener(),this);
+        this.getServer().getPluginManager().registerEvents(new SignManagerWarp(message), this);
+    }
+
+    private void commands() {
+        PlayerManager manager = new PlayerManager();
+        Messages messages = new Messages(message);
+
+        //Vagt
+        this.getCommand("vagt").setExecutor(new VagtCommand(config, message));
+
+        //VagtChat
+        this.getCommand("vagtchat").setExecutor(new VagtChatCommand());
+
+        //VagtLevel
         this.getCommand("vagtlevel").setExecutor(new VagtLevelCommand(manager));
         this.getCommand("irons").setExecutor(new TestCommand(new VagtLevelQuests()));
 
@@ -84,37 +150,9 @@ public class Main extends JavaPlugin {
         //VagtOntime
         VagtOntime ontime = new VagtOntime(this);
         this.getCommand("ontime").setExecutor(new VagtOntimeCommand(this, ontime));
-        this.getServer().getPluginManager().registerEvents(ontime, this);
 
-        //Repair
-        this.getServer().getPluginManager().registerEvents(new Repair(config, message, new Messages(message)), this);
-
-        //VagtBuffs
-        this.getServer().getPluginManager().registerEvents(new VagtBuffs(config, message), this);
-
-        //Signs
-        this.getServer().getPluginManager().registerEvents(new HealSign(config, message), this);
-
-
-
-        //Files
-        loadDataFile();
-    }
-
-    @Override
-    public void onDisable() {
-
-        saveDataFile();
-        config.saveConfig();
-    }
-
-    private boolean setupEconomy() {
-        final RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
-        if (economyProvider != null) {
-            economy = economyProvider.getProvider();
-        }
-
-        return (economy != null);
+        //VagtKiste
+        this.getCommand("vagtkiste").setExecutor(new VagtKisteCommand());
     }
 
     public static Economy getEconomy() {
@@ -129,4 +167,5 @@ public class Main extends JavaPlugin {
     public void saveDataFile() {
         Data.save();
     }
+
 }

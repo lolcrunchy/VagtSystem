@@ -1,19 +1,18 @@
-package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant;
+package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.b;
 
 import dev.crnyy.vagtsystem.utils.ItemStackManager;
 import dev.crnyy.vagtsystem.utils.LoreManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Utility;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-public class CVagtEnchantMenu {
+public class BVagtEnchantMenu {
 
-    private Inventory inv = Bukkit.createInventory(null, 54, "Vagt Enchant");
+    private Inventory inv = Bukkit.createInventory(null, 54, "Vagt Enchant B");
 
     @Utility
     public void items(final Player player) {
@@ -57,7 +56,7 @@ public class CVagtEnchantMenu {
             inv.setItem(20, item);
         }
 
-        if (chestplateItem != null && chestplateItem.getType() == Material.IRON_CHESTPLATE) {
+        if (chestplateItem != null && chestplateItem.getType() == Material.DIAMOND_CHESTPLATE) {
             item = chestplateItem.clone();
             inv.setItem(21, item);
         } else {
@@ -65,7 +64,7 @@ public class CVagtEnchantMenu {
             inv.setItem(21, item);
         }
 
-        if (leggingsItem != null && leggingsItem.getType() == Material.IRON_LEGGINGS) {
+        if (leggingsItem != null && leggingsItem.getType() == Material.DIAMOND_LEGGINGS) {
             item = leggingsItem.clone();
             inv.setItem(22, item);
         } else {
@@ -73,7 +72,7 @@ public class CVagtEnchantMenu {
             inv.setItem(22, item);
         }
 
-        if (bootsItem != null && bootsItem.getType() == Material.IRON_BOOTS) {
+        if (bootsItem != null && bootsItem.getType() == Material.DIAMOND_BOOTS) {
             item = bootsItem.clone();
             inv.setItem(23, item);
         } else {
@@ -82,16 +81,16 @@ public class CVagtEnchantMenu {
         }
 
 
-        if (hasItemWithName(player.getInventory(), Material.IRON_SWORD, "§cVagt Sværd")) {
-            item = findItemWithName(player.getInventory(), Material.IRON_SWORD, "§cVagt Sværd");;
+        if (hasItemWithName(player.getInventory(), Material.DIAMOND_SWORD, "§bVagt Sværd")) {
+            item = findItemWithName(player.getInventory(), Material.DIAMOND_SWORD, "§bVagt Sværd");;
             inv.setItem(24, item);
         } else {
             item = itemStackManager.itemMaker("§7", Material.STAINED_GLASS, 1, 14, loreManager.loreMaker(""));
             inv.setItem(24, item);
         }
 
-        if (hasItemWithName(player.getInventory(), Material.BOW, "§cVagt Bue")) {
-            item = findItemWithName(player.getInventory(), Material.BOW, "§cVagt Bue");;
+        if (hasItemWithName(player.getInventory(), Material.BOW, "§bVagt Bue")) {
+            item = findItemWithName(player.getInventory(), Material.BOW, "§bVagt Bue");;
             inv.setItem(31, item);
         } else {
             item = itemStackManager.itemMaker("§7", Material.STAINED_GLASS, 1, 14, loreManager.loreMaker(""));

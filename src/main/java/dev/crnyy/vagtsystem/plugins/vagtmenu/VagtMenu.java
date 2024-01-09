@@ -53,6 +53,7 @@ public class VagtMenu {
                 "",
                 "§8§m-------------------------"));
         inv.setItem(20, item);
+
         //Vagt ONTIME
         item = itemStack.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNiOGYwNjg4NWQxZGFhZmQyNmNkOTViMzQ4MmNiNTI1ZDg4MWE2N2UwZDI0NzE2MWI5MDhkOTNkNTZkMTE0ZiJ9fX0=", "§6§lVAGT §f§lONTIME", lore.loreMaker(
                 "§8§m-------------------------",
@@ -65,6 +66,7 @@ public class VagtMenu {
                 "",
                 "§8§m-------------------------"));
         inv.setItem(21, item);
+
         //VagtWarp
         item = itemStack.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWY1ZDNhNThlZmE3ZTNlZTQ2YzA2YTEzMDAxNWY0YTJkMTkzZjdhMmIyNTUyNmQ0YmVjZTRlMzM4NWUzZWFiNSJ9fX0=", "§6§lVAGT §f§lWARPS", lore.loreMaker(
                 "§8§m-------------------------",
@@ -79,7 +81,7 @@ public class VagtMenu {
         inv.setItem(22, item);
 
         //Vagt events
-        item = itemStack.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTc0ZjkxMGNhN2VkNzNkOGM1ZmRjODQ3NmQxYmVkN2FlNGUxOGY4ZTFkZjZiODAwZDE2YjNiZTNkMzNlYmJmYyJ9fX0=", "§6§lVAGT §f§EVENTS", lore.loreMaker(
+        item = itemStack.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTc0ZjkxMGNhN2VkNzNkOGM1ZmRjODQ3NmQxYmVkN2FlNGUxOGY4ZTFkZjZiODAwZDE2YjNiZTNkMzNlYmJmYyJ9fX0=", "§6§lVAGT §f§lEVENTS", lore.loreMaker(
                 "§8§m-------------------------",
                 "",
                 "§7Denne fører til",

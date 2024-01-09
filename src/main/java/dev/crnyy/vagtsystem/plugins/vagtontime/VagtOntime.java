@@ -15,12 +15,11 @@ import java.util.UUID;
 
 public class VagtOntime implements Listener {
 
+    public static Map<UUID, Long> onTimeMap = new HashMap<UUID, Long>();
     private final Main plugin;
     public VagtOntime(Main plugin) {
         this.plugin = plugin;
     }
-
-    public static Map<UUID, Long> onTimeMap = new HashMap<UUID, Long>();
 
     @EventHandler
     private void onJoinEvent(PlayerJoinEvent e) {
@@ -32,7 +31,7 @@ public class VagtOntime implements Listener {
             new BukkitRunnable() {
                 @Override
                 public void run() {
-                    for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+                    for (Player player : Bukkit.getOnlinePlayers()) {
                         updateOnlineTime(player);
                     }
                 }

@@ -1,6 +1,7 @@
-package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant;
+package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.a;
 
 import dev.crnyy.vagtsystem.Main;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.c.CVagtEnchantItems;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -10,7 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
 
-public class CVagtEnchantListener implements Listener {
+public class AVagtEnchantListener implements Listener {
 
     private Economy economy = Main.economy;
     @EventHandler
@@ -32,7 +33,7 @@ public class CVagtEnchantListener implements Listener {
         if (topInventory == null) {
             return;
         }
-        if (topInventory.getName().equals("Vagt Enchant")) {
+        if (topInventory.getName().equals("Vagt Enchant A")) {
             if (e.getCursor().getType() != Material.AIR) {
                 e.setCancelled(true);
             }
@@ -40,7 +41,7 @@ public class CVagtEnchantListener implements Listener {
                 e.setCancelled(true);
             }
         }
-        if (e.getClickedInventory().getName().equals("Vagt Enchant")) {
+        if (e.getClickedInventory().getName().equals("Vagt Enchant A")) {
             if (e.getCursor().getType() != Material.AIR) {
                 e.setCancelled(true);
             }

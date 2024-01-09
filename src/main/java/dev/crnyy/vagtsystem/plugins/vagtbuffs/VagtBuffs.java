@@ -36,10 +36,8 @@ public class VagtBuffs implements Listener {
             e.setLine(2, ChatColor.translateAlternateColorCodes('&', message.getMessages().getString("buffsign.text.3nd")));
             e.setLine(3, ChatColor.translateAlternateColorCodes('&', message.getMessages().getString("buffsign.text.4nd")));
         }
-
-
-
     }
+
     @EventHandler
     public void onBuffclick(PlayerInteractEvent e) {
         String configWorld = config.getConfig().getString("Worlds.C", "world");

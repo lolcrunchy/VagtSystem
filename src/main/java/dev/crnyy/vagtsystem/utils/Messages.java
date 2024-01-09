@@ -20,11 +20,19 @@ public class Messages {
         String newMessageOne = oldMessage.replace("{0}", type);
         return newMessageOne.replace("{1}", String.valueOf(price));
     }
+    public String vagtshopNoMoneyEnchant() {
+        return message.getMessages().getString("Vagtshop.no-money");
+    }
 
-    public String vagtshopEnchant() {
+    public String vagtshopEnchant(String enchant, int amount) {
         String oldMessage = message.getMessages().getString("Vagtshop.enchant-item");
-        String newMessageOne = oldMessage.replace("{0}", "enchant");
-        return newMessageOne.replace("{1}", "amount");
+        String newMessageOne = oldMessage.replace("{0}", enchant);
+        return newMessageOne.replace("{1}", String.valueOf(amount));
+    }
+
+    public String vagtshopAlreadyOwned(String enchantType) {
+        String oldMessage = message.getMessages().getString("Vagtshop.no-money");
+        return oldMessage.replace("{0}", String.valueOf(enchantType));
     }
 
     public String vagtpayPayout() {

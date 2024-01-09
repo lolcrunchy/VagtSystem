@@ -1,8 +1,11 @@
-package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant;
+package dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.a;
 
 import dev.crnyy.vagtsystem.Main;
 import dev.crnyy.vagtsystem.files.Config;
 import dev.crnyy.vagtsystem.plugins.ArmorManager;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.c.CVagtEnchantItems;
+import dev.crnyy.vagtsystem.plugins.vagtgearshop.vagtenchant.c.CVagtEnchantMenu;
+import dev.crnyy.vagtsystem.utils.Messages;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Material;
 import org.bukkit.Utility;
@@ -22,15 +25,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class CVagtEnchantItemsListener implements Listener {
+public class AVagtEnchantItemsListener implements Listener {
 
     private final ArmorManager armorManager;
     private final CVagtEnchantItems menus;
+    private final Messages messages;
     private final Config config;
-    public  CVagtEnchantItemsListener(ArmorManager armorManager, Config config, CVagtEnchantItems menus) {
+    public AVagtEnchantItemsListener(ArmorManager armorManager, Config config, Messages messages, CVagtEnchantItems menus) {
         this.armorManager = armorManager;
-        this.config = config;
         this.menus = menus;
+        this.messages = messages;
+        this.config = config;
     }
 
     private Map<UUID, Integer> helmetEnchant = new HashMap<UUID, Integer>();
