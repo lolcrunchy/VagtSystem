@@ -125,7 +125,7 @@ public class CVagtEnchantItemsListener implements Listener {
                                     helmet.setItemMeta(itemMeta);
                                     player.getInventory().setHelmet(helmet);
                                     e.setCurrentItem(helmet);
-                                    player.sendMessage("Du købte protection " + protection);
+                                    player.sendMessage(messages.vagtshopEnchant("protection", protection));
                                     economy.withdrawPlayer(player, cost);
                                     helmetEnchant.put(player.getUniqueId(), protection);
                                     player.getInventory().getHelmet().addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, protection);
