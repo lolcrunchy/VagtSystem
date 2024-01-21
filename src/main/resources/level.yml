@@ -1,0 +1,423 @@
+level:
+  1:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  2:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  3:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  4:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  5:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  6:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  7:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+
+  8:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  9:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  10:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  11:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  12:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  13:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  14:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  15:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  16:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  17:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  18:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  19:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+  20:
+    eat: 25
+    jail: 10
+    killprison: 25
+    ironingots: 32
+    cobblestone: 500
+    irongearpiece: 100
+    diamondpiece: 0
+    vagtløn: 2500 #Skal være mere end 2500
+    heads: 0
+    bread: 32
+    seeds: 32
+    diamondblock: 0
+    string: 0
+    vvbox: 0
+    death: 1
+    vagtrecommended: 0
+    ontime: 5 #in hours
+    money: 4000 #Dette blir fjernet
+    minesblockinspsser: 500
+    rareitemsinvagtpost: 0
+

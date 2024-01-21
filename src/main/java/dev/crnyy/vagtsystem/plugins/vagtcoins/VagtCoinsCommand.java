@@ -28,7 +28,7 @@ public class VagtCoinsCommand implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("vagtcoins")) {
             if (args.length == 1) {
                 if (args[0].equalsIgnoreCase("menu")) {
-                    menu.open(player);
+                    menu.openInventory(player);
                 }
             } else {
                 player.sendMessage("Coins system");

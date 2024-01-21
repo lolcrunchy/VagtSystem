@@ -4,6 +4,7 @@ import dev.crnyy.vagtsystem.Main;
 import dev.crnyy.vagtsystem.files.Config;
 import dev.crnyy.vagtsystem.plugins.ArmorManager;
 import dev.crnyy.vagtsystem.utils.Messages;
+import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -125,7 +126,7 @@ public class CVagtShopListener implements Listener {
                                 am.cBootsMap.put(player.getUniqueId(), 0);
                                 player.getInventory().addItem(am.cBoots(player));
                                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', messages.vagtshopBuyedItem("Sko", price)));
-                                economy.withdrawPlayer(player, 2000);
+                                economy.withdrawPlayer(player, price);
                             } else {
                                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', messages.vagtshopNoMoney("Sko", price)));
                             }
@@ -142,7 +143,7 @@ public class CVagtShopListener implements Listener {
                                 am.cSwordMap.put(player.getUniqueId(), 0);
                                 player.getInventory().addItem(am.cSword(player));
                                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', messages.vagtshopBuyedItem("Sværd", price)));
-                                economy.withdrawPlayer(player, 2000);
+                                economy.withdrawPlayer(player, price);
                             } else {
                                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', messages.vagtshopNoMoney("Sværd", price)));
                             }
