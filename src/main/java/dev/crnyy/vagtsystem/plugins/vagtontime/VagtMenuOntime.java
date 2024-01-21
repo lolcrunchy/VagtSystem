@@ -1,4 +1,4 @@
-package dev.crnyy.vagtsystem.plugins.vagtontime;
+package dev.crnyy.vagtsystem.plugins.vagtcoins;
 
 import dev.crnyy.vagtsystem.utils.ItemStackManager;
 import dev.crnyy.vagtsystem.utils.LoreManager;
@@ -11,34 +11,42 @@ import org.bukkit.inventory.ItemStack;
 
 public class VagtMenuOntime {
 
-    private Inventory ontime = Bukkit.createInventory(null, 45, "§6§lVAGT §f§lONTIME§7 - Hovedemenu");
+    private Inventory menu = Bukkit.createInventory(null, 45, "§6§lVAGT §f§lCOINS");
+
 
     @Utility
     public void items(final Player player) {
         ItemStack item;
-        ItemStackManager itemStack = new ItemStackManager();
-        LoreManager lore = new LoreManager();
+        ItemStackManager itemStackManager = new ItemStackManager();
+        LoreManager loreManager = new LoreManager();
 
-        //Vagt
-        item = itemStack.itemMaker("§7", Material.STAINED_GLASS_PANE, 1, 1, lore.loreMaker(""));
+        item = itemStackManager.itemMaker("§7", Material.STAINED_GLASS_PANE, 1, 1, loreManager.loreMaker(""));
         for (int i = 0; i < 9; i++) {
-            ontime.setItem(i, item);
+            menu.setItem(i, item);
         }
-        item = itemStack.itemMaker("§7", Material.STAINED_GLASS_PANE, 1, 0, lore.loreMaker(""));
+        item = itemStackManager.itemMaker("§7", Material.STAINED_GLASS_PANE, 1, 0, loreManager.loreMaker(""));
         for (int i = 36; i < 45; i++) {
-            ontime.setItem(i, item);
+            menu.setItem(i, item);
         }
 
-        item = itemStack.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2NhMWE0OGQyZDIzMWZhNzFiYTVmN2M0MGZkYzEwZDNmMmU5OGM1YTYzYzAxNzMyMWU2NzgxMzA4YjhhNTc5MyJ9fX0=", "§6§lALL §f§lTIME", lore.loreMaker(
-                "",
+        item = itemStackManager.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTVmZDY3ZDU2ZmZjNTNmYjM2MGExNzg3OWQ5YjUzMzhkNzMzMmQ4ZjEyOTQ5MWE1ZTE3ZThkNmU4YWVhNmMzYSJ9fX0=", "§6§lVAGT §f§lCOINS", loreManager.loreMaker(
                 "",
                 "",
                 ""));
-
-        ontime.setItem(19, item);
-
-
+        item = itemStackManager.getHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODU1MGI3Zjc0ZTllZDc2MzNhYTI3NGVhMzBjYzNkMmU4N2FiYjM2ZDRkMWY0Y2E2MDhjZDQ0NTkwY2NlMGIifX19", "§c§lTILBAGE", loreManager.loreMaker(
+                "§8§m-------------------------",
+                "",
+                "§7Klik her for at gå tilbage.",
+                "",
+                "§8§m-------------------------"));
+        menu.setItem(36, item);
     }
 
 
+    public void openInventory(final Player player) {
+        items(player);
+        player.openInventory(menu);
+
+
+    }
 }
